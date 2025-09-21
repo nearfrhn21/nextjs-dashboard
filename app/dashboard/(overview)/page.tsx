@@ -1,4 +1,6 @@
 
+export const dynamic = 'force-dynamic';
+ 
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
@@ -9,8 +11,8 @@ import {
   LatestInvoicesSkeleton,
   CardsSkeleton,
 } from '@/app/ui/skeletons';
-
-
+ 
+ 
 export default async function Page() {
   return (
     <main>
