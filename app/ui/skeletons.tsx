@@ -46,7 +46,7 @@ export function RevenueChartSkeleton() {
 
 export function InvoiceSkeleton() {
   return (
-    <div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
+    <div className="flex flex-row items-center justify-between py-4">
       <div className="flex items-center">
         <div className="mr-2 h-8 w-8 rounded-full bg-gray-200" />
         <div className="min-w-0">

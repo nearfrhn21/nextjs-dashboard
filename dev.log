@@ -1,0 +1,366 @@
+
+> dev
+> next dev --turbopack
+
+ ⚠ Port 3000 is in use, using available port 3002 instead.
+   ▲ Next.js 15.3.2 (Turbopack)
+   - Local:        http://localhost:3002
+   - Network:      http://192.168.1.9:3002
+   - Environments: .env.development.local
+
+ ✓ Starting...
+ ✓ Ready in 1329ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.2s
+ GET / 200 in 3553ms
+ ✓ Compiled in 112ms
+ ✓ Compiled / in 151ms
+ GET / 200 in 306ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 791ms
+ GET /dashboard 200 in 1762ms
+ ✓ Compiled in 146ms
+ ✓ Compiled /dashboard in 100ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 4270ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3294ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3354ms
+Fetching revenue data...
+ GET /dashboard 200 in 2564ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3511ms
+ ✓ Compiled in 1679ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 534ms
+Fetching revenue data...
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 4895ms
+ GET /dashboard 200 in 4119ms
+ ✓ Compiled in 170ms
+ ✓ Compiled /dashboard in 97ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3952ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 1960ms
+ GET /dashboard 404 in 2204ms
+ GET /dashboard 404 in 290ms
+ GET /dashboard 404 in 312ms
+ GET /dashboard 404 in 695ms
+Fetching revenue data...
+Fetching revenue data...
+ GET /dashboard 200 in 670ms
+ GET /dashboard 200 in 3761ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 4498ms
+Data fetch completed after 3 seconds.
+ ✓ Compiled in 294ms
+ ✓ Compiled /dashboard in 177ms
+ ⨯ ReferenceError: revenue is not defined
+    at Page (app/dashboard/(overview)/page.tsx:34:31)
+  32 |       </div>
+  33 |       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+> 34 |         <RevenueChart revenue={revenue}  />
+     |                               ^
+  35 |         <LatestInvoices latestInvoices={latestInvoices} />
+  36 |       </div>
+  37 |     </main> {
+  digest: '2832314288'
+}
+ GET /dashboard 200 in 1377ms
+ ✓ Compiled in 138ms
+ ✓ Compiled /dashboard in 143ms
+ ⨯ ReferenceError: revenue is not defined
+    at Page (app/dashboard/(overview)/page.tsx:36:31)
+  34 |       </div>
+  35 |       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+> 36 |         <RevenueChart revenue={revenue}  />
+     |                               ^
+  37 |         <LatestInvoices latestInvoices={latestInvoices} />
+  38 |       </div>
+  39 |     </main> {
+  digest: '2832314288'
+}
+ GET /dashboard 200 in 1641ms
+ ✓ Compiled in 171ms
+ ✓ Compiled /dashboard in 213ms
+ ⨯ ReferenceError: revenue is not defined
+    at Page (app/dashboard/(overview)/page.tsx:36:31)
+  34 |       </div>
+  35 |       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+> 36 |         <RevenueChart revenue={revenue}  />
+     |                               ^
+  37 |          <Suspense fallback={<RevenueChartSkeleton />}>
+  38 |           <RevenueChart />
+  39 |         </Suspense> {
+  digest: '4132088372'
+}
+ GET /dashboard 200 in 1541ms
+ ✓ Compiled in 217ms
+ ✓ Compiled /dashboard in 159ms
+ ⨯ ReferenceError: revenue is not defined
+    at Page (app/dashboard/(overview)/page.tsx:36:31)
+  34 |       </div>
+  35 |       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+> 36 |         <RevenueChart revenue={revenue}  />
+     |                               ^
+  37 |          <Suspense fallback={<RevenueChartSkeleton />}>
+  38 |           <RevenueChart />
+  39 |         </Suspense> {
+  digest: '3762046337'
+}
+ GET /dashboard 200 in 1534ms
+ ✓ Compiled in 274ms
+ ✓ Compiled /dashboard in 320ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 4453ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3373ms
+ ✓ Compiled in 239ms
+ ✓ Compiled /dashboard in 261ms
+ ⨯ ReferenceError: fetchLatestInvoices is not defined
+    at Page (app/dashboard/(overview)/page.tsx:11:25)
+   9 | export default async function Page() {
+  10 |   // const revenue = await fetchRevenue();
+> 11 |   const latestInvoices = await fetchLatestInvoices();
+     |                         ^
+  12 |   // Fetch the data for the cards
+  13 |   const {
+  14 |     numberOfInvoices, {
+  digest: '686523107'
+}
+ GET /dashboard 200 in 563ms
+ ✓ Compiled in 123ms
+ ✓ Compiled /dashboard in 131ms
+Fetching revenue data...
+ ⨯ TypeError: Cannot read properties of undefined (reading 'map')
+    at LatestInvoices (app/ui/dashboard/latest-invoices.tsx:20:26)
+  18 |
+  19 |         <div className="bg-white px-6">
+> 20 |           {latestInvoices.map((invoice, i) => {
+     |                          ^
+  21 |             return (
+  22 |               <div
+  23 |                 key={invoice.id} {
+  digest: '668976517'
+}
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3982ms
+ ✓ Compiled in 497ms
+ ✓ Compiled /dashboard in 248ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 5851ms
+Fetching revenue data...
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3746ms
+ ✓ Compiled in 291ms
+ ✓ Compiled /dashboard in 116ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3798ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3587ms
+ ✓ Compiled in 306ms
+ ✓ Compiled /dashboard in 113ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3881ms
+ ✓ Compiled in 177ms
+ ✓ Compiled /dashboard in 132ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:19:6)
+  17 |     totalPaidInvoices,
+  18 |     totalPendingInvoices,
+> 19 |   } = await fetchCardData();
+     |      ^
+  20 |
+  21 |   return (
+  22 |     <main> {
+  digest: '427231900'
+}
+ GET /dashboard 200 in 450ms
+ ✓ Compiled in 158ms
+ ✓ Compiled /dashboard in 129ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:19:6)
+  17 |     totalPaidInvoices,
+  18 |     totalPendingInvoices,
+> 19 |   } = await fetchCardData();
+     |      ^
+  20 |
+  21 |   return (
+  22 |     <main> {
+  digest: '427231900'
+}
+ GET /dashboard 200 in 563ms
+ ✓ Compiled in 313ms
+ ✓ Compiled /dashboard in 162ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '427231900'
+}
+ GET /dashboard 200 in 1566ms
+ ✓ Compiled in 138ms
+ ✓ Compiled /dashboard in 143ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '427231900'
+}
+ GET /dashboard 200 in 709ms
+ ✓ Compiled in 142ms
+ ✓ Compiled /dashboard in 137ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '427231900'
+}
+ GET /dashboard 200 in 1545ms
+ ✓ Compiled in 237ms
+ ✓ Compiled /dashboard in 175ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '1367191483'
+}
+ GET /dashboard 200 in 1212ms
+ ✓ Compiled in 162ms
+ ✓ Compiled /dashboard in 103ms
+ ⨯ ReferenceError: fetchCardData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '3758526451'
+}
+ GET /dashboard 200 in 588ms
+ ✓ Compiled in 744ms
+ ✓ Compiled /dashboard in 360ms
+ ⨯ ReferenceError: fetchCardsData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardsData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '919109683'
+}
+ GET /dashboard 200 in 1155ms
+ ⨯ ReferenceError: fetchCardsData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardsData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '919109683'
+}
+ GET /dashboard 200 in 372ms
+ ✓ Compiled in 192ms
+ ✓ Compiled /dashboard in 371ms
+ ⨯ ReferenceError: fetchCardsData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardsData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '919109683'
+}
+ GET /dashboard 200 in 1434ms
+ ⨯ ReferenceError: fetchCardsData is not defined
+    at Page (app/dashboard/(overview)/page.tsx:23:6)
+  21 |     totalPaidInvoices,
+  22 |     totalPendingInvoices,
+> 23 |   } = await fetchCardsData();
+     |      ^
+  24 |
+  25 |   return (
+  26 |     <main> {
+  digest: '919109683'
+}
+ GET /dashboard 200 in 2065ms
+ ✓ Compiled in 568ms
+ ✓ Compiled /dashboard in 224ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 5353ms
+ ✓ Compiled in 483ms
+ ✓ Compiled /dashboard in 148ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3472ms
+Fetching revenue data...
+Fetching latest invoices...
+Data fetch completed after 2 seconds.
+Data fetch completed after 3 seconds.
+ GET /dashboard 200 in 3400ms
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+[CanaryOnlyError: The experimental feature "experimental.ppr" can only be enabled when using the latest canary version of Next.js.]
+
+Node.js v22.19.0
+[?25h
